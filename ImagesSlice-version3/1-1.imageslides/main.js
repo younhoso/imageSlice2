@@ -13,6 +13,6 @@ var slideImg = $('.slide_img');
     }
 
 
-$(function(){
+$(function(){ 
     setInterval(showNext, 3000); 
 });
