@@ -1,0 +1,31 @@
+*{margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+body {background: #333;}
+h3 {color: #2edf19;}
+
+@keyframes indicator-effect1 {
+    0% {height: 0;}
+    100% {height: 78px;}
+}
+@keyframes indicator-effect2 {
+    0% {opacity: 1; transform: scale(0);}
+    100% {opacity: 0; transform: scale(2.5);}
+}
+.year {position: relative; height: 390px;}
+.year-indicator {position: absolute; left: 30px; top: 50%; transform: translate(0, -50%); font-size: 14px;}
+.year-indicator li {position: relative;}
+.year-indicator li:before {content: ''; position: absolute; left: 5px; top: 50%; width: 3px; height: 78px; background: #e0e0e0;}
+.year-indicator li:after {content: ''; position: absolute; left: 5px; top: 50%; width: 3px; height: 0; background: #ec1d25;}
+.year-indicator li:last-child:before {display: none;}
+.year-indicator li:last-child:after {display: none;}
+.year-indicator li + li {margin-top: 60px;}
+.year-indicator li a {position: relative; display: block; line-height: 20px; transition: all 0.3s;}
+.year-indicator li a:before {content: ''; position: relative; display: inline-block; width: 12px; height: 12px; border-radius: 10px; background: #e0e0e0; margin-right: 10px; vertical-align: middle; z-index: 10;}
+.year-indicator li a:after {content: ''; position: absolute; left: 0; top: 6px; width: 12px; height: 12px; border-radius: 10px; background: #ec1d25; transform: scale(0);}
+
+
+.year-indicator li.on:after {animation: indicator-effect1 2s ease-out 2s 1 normal forwards;}
+.year-indicator li.on a {font-weight: bold;}
+.year-indicator li.on a:before {background: #ec1d25;}
+.year-indicator li.on a:after {animation: indicator-effect2 1s ease-out 0s infinite normal forwards;}

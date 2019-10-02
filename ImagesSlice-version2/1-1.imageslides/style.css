@@ -1,0 +1,16 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+body {background: #333;}
+h2 {color: #2edf19;}
+
+.slide_img {
+    width: 600px; 
+    height: 380px; 
+    margin: auto; 
+    overflow: hidden; 
+    position: absolute; 
+    left: 0; top: 0; bottom: 0; right: 0; 
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
+}
+.slide_img img {width: 100%;}

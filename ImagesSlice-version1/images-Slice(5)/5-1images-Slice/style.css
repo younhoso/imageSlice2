@@ -1,0 +1,96 @@
+
+/* reset */
+html,body{height: 100%;}
+*{margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+body {background: #333;}
+h3 {color: #2edf19;}
+img {width:100%; height: auto; display: inline-block;}
+
+.slide_wrap{padding: 30px 0; position: relative; background: #222;}
+
+/* slide image */
+.slide_show {
+    width: 800px;
+    height: 530px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.slide_show .slide_img {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+.slide_show .slide_img .slide{
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 0;
+}
+.slide_show .slide_img .slide figure {
+   position: relative;
+}
+.slide_show .slide_img .slide figcaption {
+    width: 100%;
+    position: absolute; 
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    color: #fff;
+    padding: 20px;
+    background: rgba(0, 0, 0, .3);
+}
+.slide_show .slide_img .slide figcaption em{
+    display: block;
+    font-weight: 600;
+    font-size: 38px;
+    font-style: normal;
+    text-transform: uppercase;
+}
+.slide_show .slide_img .slide figcaption span{
+    display: block;
+    font-size: 24px;
+}
+
+/* slide btn */
+.slide_btn a{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .2);
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    position: absolute; top: 50%; transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.slide_btn a.prev {left: 10px;}
+.slide_btn a.next {right: 10px;}
+.slide_btn a:hover {background: rgba(0, 0, 0, 1);}
+
+/* slide dot */
+.slide_dot {
+    position: absolute;
+    left: 50%;
+    bottom: -50%;
+    transform: translateX(-50%);
+}
+.slide_dot a {
+    width: 10px; height: 10px; background: rgba(255, 255, 255, 0.5); display: inline-block; border-radius: 50%; margin: 5px;
+}
+.slide_dot a.active {
+    background: rgba(255, 255, 255, 1);
+}
+
+/* slide count */
+.slide_count {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+}
